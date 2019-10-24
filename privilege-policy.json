@@ -5,7 +5,10 @@
             "Effect": "Allow",
             "Action": [
                 "dynamodb:PutItem",
-                "dynamodb:GetItem"
+                "dynamodb:GetItem",
+                "logs:CreateLogGroup",
+                "logs:PutLogEvents",
+		"logs:CreateLogStream"
             ],
             "Resource": "*"
         }
