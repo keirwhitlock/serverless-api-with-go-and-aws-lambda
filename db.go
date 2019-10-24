@@ -35,3 +35,23 @@ func getItem(isbn string) (*book, error) {
 
 	return bk, nil
 }
+
+func putItem(bk *book) error {
+	input := &dynamodb.PutItemInput{
+		TableName: aws.String("Books"),
+		Item: map[string]*dynamodb.AttributeValue{
+			"ISBN": {
+				S: aws.String(bk.ISBN),
+			},
+			"Title": {
+				S: aws.String(bk.Title),
+			},
+			"Author": {
+				S: aws.String(bk.Author),
+			},
+		},
+	}
+
+	_, err := db.PutItem(input)
+	return err
+}
