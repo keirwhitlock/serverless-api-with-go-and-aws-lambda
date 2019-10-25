@@ -2,11 +2,11 @@
 version: 0.2
 
 phases:
-build:
-  commands:
-    - echo Building...
-    - env GO111MODULE=auto GOOS=linux GOARCH=amd64 go build -o ./main
-    - zip -j ./main.zip ./main
+  build:
+    commands:
+      - echo Building...
+      - env GO111MODULE=auto GOOS=linux GOARCH=amd64 go build -o ./main
+      - zip -j ./main.zip ./main
 artifacts:
     secondary-artifacts:
       artifact1:
