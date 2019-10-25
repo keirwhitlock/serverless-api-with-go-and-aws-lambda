@@ -30,3 +30,7 @@ resource "aws_api_gateway_deployment" "staging" {
   rest_api_id = "${aws_api_gateway_rest_api.bookstore.id}"
   stage_name  = "staging"
 }
+
+output "invoke_url" {
+  value = "${aws_api_gateway_deployment.staging.invoke_url}"
+}
