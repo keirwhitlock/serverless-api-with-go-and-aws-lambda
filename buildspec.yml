@@ -11,8 +11,6 @@ phases:
       - env GO111MODULE=auto GOOS=linux GOARCH=amd64 go build -o ./main
       - zip -j ./main.zip ./main
 artifacts:
-    secondary-artifacts:
-      artifact1:
-        files:
-          - main.zip
-        name: main.zip
+  files:
+    - main.zip
+  name: main.zip
