@@ -5,13 +5,17 @@ phases:
   install:
     runtime-versions:
       golang: 1.13
+  pre_build:
+    commands:
+      - echo "Running Go unit tests"
+      - GO111MODULE=auto go test
   build:
     commands:
-      - echo Building...
+      - echo "Building..."
       - env GO111MODULE=auto GOOS=linux GOARCH=amd64 go build -o ./main
       - zip -j ./main.zip ./main
 artifacts:
   files:
     - main.zip
     - appspec.yml
-  name: main.zip
+  discard_paths: yes
