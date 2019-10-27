@@ -1,0 +1,9 @@
+version: 0.0
+Resources:
+  - books: 
+      Type: AWS::Lambda::Function
+      Properties:
+        Name: "books" # Specify the name of your Lambda function
+        Alias: "booksAlias"
+        CurrentVersion: "1"
+        TargetVersion: "1"
