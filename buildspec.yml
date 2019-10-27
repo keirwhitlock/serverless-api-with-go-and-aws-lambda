@@ -13,9 +13,5 @@ phases:
 artifacts:
   files:
     - main.zip
+    - appspec.yml
   name: main.zip
-  secondary-artifacts:
-    appspec:
-      files:
-        - appspec.yml
-      name: appspec.yml
