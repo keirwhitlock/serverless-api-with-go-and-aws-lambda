@@ -17,5 +17,5 @@ phases:
 artifacts:
   files:
     - main.zip
-    - appspec.yml
+    - appspec.yaml
   discard_paths: yes
