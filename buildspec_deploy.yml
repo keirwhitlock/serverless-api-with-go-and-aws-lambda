@@ -9,5 +9,5 @@ phases:
     commands:
       - echo "Deploying..."
       - ls -l
-      - aws --region eu-west-2 deploy create-deployment --application books --deployment-group-name booksDeployGroup --s3-location bucket=books-pipeline,bundleType=YAML,key=appspec.yaml
+      - aws --region eu-west-2 deploy create-deployment --application booksAppDeploy --deployment-group-name booksDeployGroup --s3-location bucket=books-pipeline,bundleType=YAML,key=appspec.yaml
 
